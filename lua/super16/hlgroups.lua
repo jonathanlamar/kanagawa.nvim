@@ -1,7 +1,7 @@
 local M = {}
 local c = require("super16.color")
 
----@param colors Super16Colors
+---@param colors Super16ColorSet|ThemeColors
 local function setup_terminal_colors(colors)
     vim.g.terminal_color_0 = colors.black0 -- black
     vim.g.terminal_color_1 = colors.red1 -- red
@@ -24,7 +24,7 @@ local function setup_terminal_colors(colors)
 end
 
 --- generate highlights table
----@param colors ThemeColors|Super16Colors theme color table created by require("super16.colors").setup()
+---@param colors Super16ColorSet|ThemeColors theme color table created by require("super16.colors").setup()
 ---@param config table? config options (optional)
 function M.setup(colors, config)
     config = vim.tbl_extend("force", require("super16").config, config or {})
@@ -321,6 +321,12 @@ function M.setup(colors, config)
         NvimTreeGitStaged = { fg = colors.git.added },
         NvimTreeOpenedFile = { fg = colors.sp, italic = true },
         NvimTreeWinSeparator = { link = "WinSeparator" },
+        -- NeoTree
+        NeoTreeDirectoryIcon = { link = "NvimTreeFolderIcon" },
+        NeoTreeDirectoryName = { link = "NvimTreeFolderName" },
+        NeoTreeSymbolicLinkTarget = { link = "NvimTreeSymlink" },
+        NeoTreeRootName = { link = "NvimTreeRootFolder" },
+        NeoTreeFileNameOpened = { link = "NvimTreeOpenedFile" },
         -- Dashboard
         DashboardShortCut = { fg = colors.sp },
         DashboardHeader = { fg = colors.git.removed },

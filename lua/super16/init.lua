@@ -26,11 +26,10 @@ M.config = {
     dimInactive = false,
     globalStatus = false,
     terminalColors = true,
-    ---@type Super16Colors
+    ---@type ThemeColors
     colors = {},
-    ---@type Super16Colors
     overrides = {},
-    theme = "default",
+    theme = "kanagawa",
 }
 
 --- update global configuration with user settings
