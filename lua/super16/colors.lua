@@ -1,54 +1,54 @@
 ---@class Super16Colors
 local palette_colors = {
     -- Bg Shades
-    sumiInk0 = "#282828",
-    sumiInk1b = "#181820",
-    sumiInk1c = "#1a1a22",
-    sumiInk1 = "#1D2021",
-    sumiInk2 = "#32302F",
-    sumiInk3 = "#3C3836",
-    sumiInk4 = "#504945",
-    -- Popup and Floats
-    waveBlue1 = "#665C54",
-    waveBlue2 = "#374141",
-    -- Diff and Git
-    winterGreen = "#34381b",
-    winterYellow = "#4f422e",
-    winterRed = "#402120",
-    winterBlue = "#0e363e",
-    autumnGreen = "#98971A",
-    autumnRed = "#9d0006",
-    autumnYellow = "#D79921",
-    -- Diag
-    samuraiRed = "#CC241D",
-    roninYellow = "#FABD2F",
-    waveAqua1 = "#689D6A",
-    dragonBlue = "#45707a",
-    -- Fg and Comments
-    oldWhite = "#EBDBB2",
-    fujiWhite = "#FBF1C7",
-    fujiGray = "#928374",
-    springViolet1 = "#B16286",
-    oniViolet = "#D3869B",
-    crystalBlue = "#458588",
-    springViolet2 = "#7daea3",
-    springBlue = "#83A598",
-    lightBlue = "#80aa9e", -- unused yet
-    waveAqua2 = "#8EC07C", -- improve lightness: desaturated greenish Aqua
-    -- waveAqua2  = "#68AD99",
-    -- waveAqua4  = "#7AA880",
-    -- waveAqua5  = "#6CAF95",
-    -- waveAqua3  = "#68AD99",
+    black0 = "#282828",
+    black1b = "#181820",
+    black1c = "#1a1a22",
+    black1 = "#1D2021",
+    black2 = "#32302F",
+    black3 = "#3C3836",
+    black4 = "#504945",
 
-    springGreen = "#B8BB26",
-    boatYellow1 = "#A89984",
-    boatYellow2 = "#BDAE93",
-    carpYellow = "#D5C4A1",
-    sakuraPink = "#d3869b",
-    waveRed = "#D65D0E",
-    peachRed = "#FB4934",
-    surimiOrange = "#FE8019",
-    katanaGray = "#7C6F64",
+    -- Popup and Floats
+    blue1 = "#665C54",
+    blue2 = "#374141",
+
+    -- Diff and Git
+    green0 = "#34381b",
+    yellow0 = "#4f422e",
+    red0 = "#402120",
+    blue0 = "#0e363e",
+    green1 = "#98971A",
+    red1 = "#9d0006",
+    orange0 = "#D79921",
+
+    -- Diag
+    red2 = "#CC241D",
+    orange1 = "#FABD2F",
+    cyan0 = "#689D6A",
+    blue3 = "#45707a",
+
+    -- Fg and Comments
+    white0 = "#EBDBB2",
+    white1 = "#FBF1C7",
+    gray1 = "#928374",
+    violet0 = "#B16286",
+    violet1 = "#D3869B",
+    blue4 = "#458588",
+    blue5 = "#7daea3",
+    blue6 = "#83A598",
+    blue7 = "#80aa9e", -- unused yet
+    cyan1 = "#8EC07C", -- improve lightness: desaturated greenish Aqua
+
+    green2 = "#B8BB26",
+    yellow1 = "#A89984",
+    yellow2 = "#BDAE93",
+    yellow3 = "#D5C4A1",
+    magenta1 = "#d3869b",
+    magenta0 = "#D65D0E",
+    red4 = "#FB4934",
+    orange2 = "#FE8019",
+    gray0 = "#7C6F64",
 }
 
 local M = {}

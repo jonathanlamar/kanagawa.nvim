@@ -3,24 +3,24 @@ local c = require("super16.color")
 
 ---@param colors Super16Colors
 local function setup_terminal_colors(colors)
-    vim.g.terminal_color_0 = colors.sumiInk0 -- black
-    vim.g.terminal_color_1 = colors.autumnRed -- red
-    vim.g.terminal_color_2 = colors.autumnGreen -- green
-    vim.g.terminal_color_3 = colors.boatYellow2 -- yellow
-    vim.g.terminal_color_4 = colors.crystalBlue -- blue
-    vim.g.terminal_color_5 = colors.oniViolet -- magenta
-    vim.g.terminal_color_6 = colors.waveAqua1 -- cyan
-    vim.g.terminal_color_7 = colors.oldWhite -- white
-    vim.g.terminal_color_8 = colors.fujiGray -- bright black
-    vim.g.terminal_color_9 = colors.samuraiRed -- bright red
-    vim.g.terminal_color_10 = colors.springGreen -- bright green
-    vim.g.terminal_color_11 = colors.carpYellow -- bright yellow
-    vim.g.terminal_color_12 = colors.springBlue -- bright blue
-    vim.g.terminal_color_13 = colors.springViolet1 -- bright magenta
-    vim.g.terminal_color_14 = colors.waveAqua2 -- bright cyan
-    vim.g.terminal_color_15 = colors.fujiWhite -- bright white
-    vim.g.terminal_color_16 = colors.surimiOrange -- extended color 1
-    vim.g.terminal_color_17 = colors.peachRed -- extended color 2
+    vim.g.terminal_color_0 = colors.black0 -- black
+    vim.g.terminal_color_1 = colors.red1 -- red
+    vim.g.terminal_color_2 = colors.green1 -- green
+    vim.g.terminal_color_3 = colors.yellow2 -- yellow
+    vim.g.terminal_color_4 = colors.blue4 -- blue
+    vim.g.terminal_color_5 = colors.violet1 -- magenta
+    vim.g.terminal_color_6 = colors.cyan0 -- cyan
+    vim.g.terminal_color_7 = colors.white0 -- white
+    vim.g.terminal_color_8 = colors.gray1 -- bright black
+    vim.g.terminal_color_9 = colors.red2 -- bright red
+    vim.g.terminal_color_10 = colors.green2 -- bright green
+    vim.g.terminal_color_11 = colors.yellow3 -- bright yellow
+    vim.g.terminal_color_12 = colors.blue6 -- bright blue
+    vim.g.terminal_color_13 = colors.violet0 -- bright magenta
+    vim.g.terminal_color_14 = colors.cyan1 -- bright cyan
+    vim.g.terminal_color_15 = colors.white1 -- bright white
+    vim.g.terminal_color_16 = colors.orange2 -- extended color 1
+    vim.g.terminal_color_17 = colors.red4 -- extended color 2
 end
 
 --- generate highlights table
