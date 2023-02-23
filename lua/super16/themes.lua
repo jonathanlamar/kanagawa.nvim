@@ -1,47 +1,47 @@
-local c = require("kanagawa.color")
+local c = require("super16.color")
 --TODO: standardize theme color names
 
 ---@class ThemeColors
----@field bg KanagawaColors default background
----@field bg_dim KanagawaColors dimmed background
----@field bg_dark KanagawaColors dark background (float)
----@field bg_light0 KanagawaColors Fold/ColorColumn background
----@field bg_light1 KanagawaColors CursorLine/TabLineSel background
----@field bg_light2 KanagawaColors NonText foreground
----@field bg_light3 KanagawaColors dimmed foreground (Conceal, Folded, TabLine)
----@field bg_menu KanagawaColors
----@field bg_menu_sel KanagawaColors
----@field bg_status KanagawaColors
----@field bg_visual KanagawaColors
----@field bg_search KanagawaColors
----@field fg_border KanagawaColors
----@field fg_dark KanagawaColors
----@field fg_reverse KanagawaColors
----@field fg_comment KanagawaColors
----@field fg KanagawaColors
----@field fg_menu KanagawaColors
----@field co KanagawaColors
----@field st KanagawaColors
----@field nu KanagawaColors
----@field id KanagawaColors
----@field fn KanagawaColors
----@field sm KanagawaColors
----@field kw KanagawaColors
----@field op KanagawaColors
----@field pp KanagawaColors
----@field ty KanagawaColors
----@field sp KanagawaColors
----@field sp2 KanagawaColors
----@field sp3 KanagawaColors
----@field br KanagawaColors
----@field re KanagawaColors
----@field dep KanagawaColors
----@field diag { error: KanagawaColors, warning: KanagawaColors, info: KanagawaColors, hint: KanagawaColors }
----@field diff { add: KanagawaColors, delete: KanagawaColors, change: KanagawaColors, text: KanagawaColors }
----@field git { added: KanagawaColors, removed: KanagawaColors, changed: KanagawaColors }
+---@field bg Super16Colors default background
+---@field bg_dim Super16Colors dimmed background
+---@field bg_dark Super16Colors dark background (float)
+---@field bg_light0 Super16Colors Fold/ColorColumn background
+---@field bg_light1 Super16Colors CursorLine/TabLineSel background
+---@field bg_light2 Super16Colors NonText foreground
+---@field bg_light3 Super16Colors dimmed foreground (Conceal, Folded, TabLine)
+---@field bg_menu Super16Colors
+---@field bg_menu_sel Super16Colors
+---@field bg_status Super16Colors
+---@field bg_visual Super16Colors
+---@field bg_search Super16Colors
+---@field fg_border Super16Colors
+---@field fg_dark Super16Colors
+---@field fg_reverse Super16Colors
+---@field fg_comment Super16Colors
+---@field fg Super16Colors
+---@field fg_menu Super16Colors
+---@field co Super16Colors
+---@field st Super16Colors
+---@field nu Super16Colors
+---@field id Super16Colors
+---@field fn Super16Colors
+---@field sm Super16Colors
+---@field kw Super16Colors
+---@field op Super16Colors
+---@field pp Super16Colors
+---@field ty Super16Colors
+---@field sp Super16Colors
+---@field sp2 Super16Colors
+---@field sp3 Super16Colors
+---@field br Super16Colors
+---@field re Super16Colors
+---@field dep Super16Colors
+---@field diag { error: Super16Colors, warning: Super16Colors, info: Super16Colors, hint: Super16Colors }
+---@field diff { add: Super16Colors, delete: Super16Colors, change: Super16Colors, text: Super16Colors }
+---@field git { added: Super16Colors, removed: Super16Colors, changed: Super16Colors }
 
 return {
-    ---@param colors KanagawaColors
+    ---@param colors Super16Colors
     default = function(colors)
         ---@type ThemeColors
         return {
@@ -171,7 +171,7 @@ return {
             },
         }
     end,
-    ---@param colors KanagawaColors
+    ---@param colors Super16Colors
     light = function(colors)
         ---@type ThemeColors
         return {

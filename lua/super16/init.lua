@@ -11,7 +11,7 @@ local function set_highlights(hlgroups)
 end
 
 --- default config
----@class KanagawaConfig
+---@class Super16Config
 M.config = {
     undercurl = true,
     commentStyle = { italic = true },
@@ -26,15 +26,15 @@ M.config = {
     dimInactive = false,
     globalStatus = false,
     terminalColors = true,
-    ---@type KanagawaColors
+    ---@type Super16Colors
     colors = {},
-    ---@type KanagawaColors
+    ---@type Super16Colors
     overrides = {},
     theme = "default",
 }
 
 --- update global configuration with user settings
----@param config KanagawaConfig? user configuration
+---@param config Super16Config? user configuration
 function M.setup(config)
     M.config = vim.tbl_extend("force", M.config, config or {})
 end
@@ -45,17 +45,11 @@ function M.load()
         vim.cmd("hi clear")
     end
 
-    vim.g.colors_name = "kanagawa"
+    vim.g.colors_name = "super16"
     vim.o.termguicolors = true
 
-    if vim.o.background == "light" then
-        M.config.theme = "light"
-    elseif vim.o.background == "dark" then
-        M.config.theme = "default"
-    end
-
-    local colors = require("kanagawa.colors").setup()
-    local hlgroups = require("kanagawa.hlgroups").setup(colors)
+    local colors = require("super16.colors").setup()
+    local hlgroups = require("super16.hlgroups").setup(colors)
 
     set_highlights(hlgroups)
 end

@@ -1,5 +1,5 @@
 local M = {}
-local c = require("kanagawa.color")
+local c = require("super16.color")
 
 local function setup_terminal_colors(colors)
     vim.g.terminal_color_0 = "#090618" -- black
@@ -23,10 +23,10 @@ local function setup_terminal_colors(colors)
 end
 
 --- generate highlights table
----@param colors ThemeColors|KanagawaColors theme color table created by require("kanagawa.colors").setup()
+---@param colors ThemeColors|Super16Colors theme color table created by require("super16.colors").setup()
 ---@param config table? config options (optional)
 function M.setup(colors, config)
-    config = vim.tbl_extend("force", require("kanagawa").config, config or {})
+    config = vim.tbl_extend("force", require("super16").config, config or {})
 
     local hlgroups = {
         Comment = vim.tbl_extend("force", { fg = colors.fg_comment }, config.commentStyle),

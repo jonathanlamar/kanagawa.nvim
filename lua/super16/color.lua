@@ -1,4 +1,4 @@
-local hsluv = require("kanagawa.hsluv")
+local hsluv = require("super16.hsluv")
 
 local Color = {}
 local Color_mt = {

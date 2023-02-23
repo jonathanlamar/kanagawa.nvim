@@ -1,4 +1,4 @@
----@class KanagawaColors
+---@class Super16Colors
 local palette_colors = {
 
     -- Bg Shades
@@ -63,11 +63,11 @@ local M = {}
 
 --- generate color table
 ---@param config table<string, string>? Config options containing colors and theme fields (optional)
----@return KanagawaColors # Palette colors and theme colors merged with config.colors
+---@return Super16Colors # Palette colors and theme colors merged with config.colors
 function M.setup(config)
-    config = vim.tbl_extend("force", require("kanagawa").config, config or {})
+    config = vim.tbl_extend("force", require("super16").config, config or {})
     local colors = vim.tbl_extend("force", palette_colors, config.colors)
-    local theme = require("kanagawa.themes")[config.theme](colors)
+    local theme = require("super16.themes")[config.theme](colors)
     theme = vim.tbl_extend("force", theme, config.colors)
     return vim.tbl_extend("force", theme, colors)
 end
