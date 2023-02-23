@@ -2,61 +2,61 @@
 local palette_colors = {
 
     -- Bg Shades
-    sumiInk0      = "#16161D",
+    sumiInk0      = "#282828",
     sumiInk1b     = "#181820",
     sumiInk1c     = "#1a1a22",
-    sumiInk1      = "#1F1F28",
-    sumiInk2      = "#2A2A37",
-    sumiInk3      = "#363646",
-    sumiInk4      = "#54546D",
+    sumiInk1      = "#1D2021",
+    sumiInk2      = "#32302F",
+    sumiInk3      = "#3C3836",
+    sumiInk4      = "#504945",
 
     -- Popup and Floats
-    waveBlue1     = "#223249",
-    waveBlue2     = "#2D4F67",
+    waveBlue1     = "#665C54",
+    waveBlue2     = "#374141",
 
     -- Diff and Git
-    winterGreen   = "#2B3328",
-    winterYellow  = "#49443C",
-    winterRed     = "#43242B",
-    winterBlue    = "#252535",
-    autumnGreen   = "#76946A",
-    autumnRed     = "#C34043",
-    autumnYellow  = "#DCA561",
+    winterGreen   = "#34381b",
+    winterYellow  = "#4f422e",
+    winterRed     = "#402120",
+    winterBlue    = "#0e363e",
+    autumnGreen   = "#98971A",
+    autumnRed     = "#9d0006",
+    autumnYellow  = "#D79921",
 
     -- Diag
-    samuraiRed    = "#E82424",
-    roninYellow   = "#FF9E3B",
-    waveAqua1     = "#6A9589",
-    dragonBlue    = "#658594",
+    samuraiRed    = "#CC241D",
+    roninYellow   = "#FABD2F",
+    waveAqua1     = "#689D6A",
+    dragonBlue    = "#45707a",
 
     -- Fg and Comments
-    oldWhite      = "#C8C093",
-    fujiWhite     = "#DCD7BA",
-    fujiGray      = "#727169",
-    springViolet1 = "#938AA9",
+    oldWhite      = "#EBDBB2",
+    fujiWhite     = "#FBF1C7",
+    fujiGray      = "#928374",
+    springViolet1 = "#B16286",
 
-    oniViolet     = "#957FB8",
-    crystalBlue   = "#7E9CD8",
-    springViolet2 = "#9CABCA",
-    springBlue    = "#7FB4CA",
-    lightBlue     = "#A3D4D5", -- unused yet
-    waveAqua2     = "#7AA89F", -- improve lightness: desaturated greenish Aqua
+    oniViolet     = "#D3869B",
+    crystalBlue   = "#458588",
+    springViolet2 = "#7daea3",
+    springBlue    = "#83A598",
+    lightBlue     = "#80aa9e", -- unused yet
+    waveAqua2     = "#8EC07C", -- improve lightness: desaturated greenish Aqua
 
     -- waveAqua2  = "#68AD99",
     -- waveAqua4  = "#7AA880",
     -- waveAqua5  = "#6CAF95",
     -- waveAqua3  = "#68AD99",
 
-    springGreen   = "#98BB6C",
-    boatYellow1   = "#938056",
-    boatYellow2   = "#C0A36E",
-    carpYellow    = "#E6C384",
+    springGreen   = "#B8BB26",
+    boatYellow1   = "#A89984",
+    boatYellow2   = "#BDAE93",
+    carpYellow    = "#D5C4A1",
 
-    sakuraPink    = "#D27E99",
-    waveRed       = "#E46876",
-    peachRed      = "#FF5D62",
-    surimiOrange  = "#FFA066",
-    katanaGray    = "#717C7C",
+    sakuraPink    = "#d3869b",
+    waveRed       = "#D65D0E",
+    peachRed      = "#FB4934",
+    surimiOrange  = "#FE8019",
+    katanaGray    = "#7C6F64",
 }
 
 local M = {}
