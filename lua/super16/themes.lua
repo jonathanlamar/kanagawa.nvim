@@ -52,22 +52,17 @@ return {
             bg_light1 = colors.sumiInk3,
             bg_light2 = colors.sumiInk4,
             bg_light3 = colors.springViolet1,
-
             bg_menu = colors.waveBlue1,
             bg_menu_sel = colors.waveBlue2,
-
             bg_status = colors.sumiInk0,
             bg_visual = colors.waveBlue1,
             bg_search = colors.waveBlue2,
-
             fg_border = colors.sumiInk4,
             fg_dark = colors.oldWhite,
             fg_reverse = colors.waveBlue1,
-
             fg_comment = colors.fujiGray,
             fg = colors.fujiWhite,
             fg_menu = colors.fujiWhite,
-
             co = colors.surimiOrange,
             st = colors.springGreen,
             nu = colors.sakuraPink,
@@ -84,21 +79,18 @@ return {
             br = colors.springViolet2,
             re = colors.boatYellow2,
             dep = colors.katanaGray,
-
             diag = {
                 error = colors.samuraiRed,
                 warning = colors.roninYellow,
                 info = colors.dragonBlue,
                 hint = colors.waveAqua1,
             },
-
             diff = {
                 add = colors.winterGreen,
                 delete = colors.winterRed,
                 change = colors.winterBlue,
                 text = colors.winterYellow,
             },
-
             git = {
                 added = colors.autumnGreen,
                 removed = colors.autumnRed,
@@ -116,22 +108,17 @@ return {
             bg_light1 = "#393836",
             bg_light2 = "#524F4B",
             bg_light3 = "#6E7675",
-
             bg_menu = colors.waveBlue1,
             bg_menu_sel = colors.waveBlue2,
-
             bg_status = "#111115",
             bg_visual = colors.waveBlue1,
             bg_search = colors.waveBlue2,
-
             fg_border = colors.sumiInk4,
             fg_dark = colors.oldWhite,
             fg_reverse = colors.waveBlue1,
-
             fg_comment = "#737c73",
             fg = "#c5c9c5",
             fg_menu = colors.fujiWhite,
-
             co = "#b6927b",
             st = "#87a987",
             nu = "#a292a3",
@@ -149,21 +136,18 @@ return {
             br = "#9e9b93",
             re = "#c3746e",
             dep = colors.katanaGray,
-
             diag = {
                 error = colors.samuraiRed,
                 warning = colors.roninYellow,
                 info = colors.dragonBlue,
                 hint = colors.waveAqua1,
             },
-
             diff = {
                 add = colors.winterGreen,
                 delete = colors.winterRed,
                 change = colors.winterBlue,
                 text = colors.winterYellow,
             },
-
             git = {
                 added = colors.autumnGreen,
                 removed = colors.autumnRed,
@@ -182,25 +166,20 @@ return {
             bg_light1 = tostring(c(colors.oldWhite):lighten(1.15)),
             bg_light2 = tostring(c(colors.springViolet1):lighten(1.1):saturate(0.6)),
             bg_light3 = tostring(c(colors.springViolet1):lighten(0.8)),
-
             -- bg_menu = tostring(c(colors.waveBlue1):lighten(4):saturate(0.30):hue(1)),
             -- bg_menu = tostring(c(colors.waveBlue1):lighten(3.9):saturate(0.5):hue(1)),
             bg_menu = tostring(c(colors.waveBlue2):lighten(2.65):saturate(0.4):hue(0.95)),
             bg_menu_sel = tostring(c(colors.waveBlue1):lighten(3.55):saturate(0.5):hue(0.95)),
-
             bg_status = tostring(c(colors.oldWhite):lighten(1.06):saturate(1)),
             -- bg_status = tostring(c(colors.fujiWhite):lighten(1):saturate(1)),
             bg_visual = tostring(c(colors.waveBlue1):lighten(4):saturate(0.20)),
             bg_search = tostring(c(colors.waveBlue2):lighten(2.5):hue(0.9):saturate(0.3)),
-
             fg_border = tostring(c(colors.oldWhite):lighten(0.6):saturate(0.5)),
             fg_dark = tostring(c(colors.sumiInk1):lighten(2.5):saturate(2.5)),
             fg_reverse = colors.fujiWhite,
-
             fg_comment = tostring(c(colors.fujiGray):lighten(1.2)),
             fg = tostring(c(colors.sumiInk1):lighten(3.0):saturate(0.9)),
             fg_menu = tostring(c(colors.sumiInk4):lighten(0.90)),
-
             co = tostring(c(colors.surimiOrange):lighten(0.75)),
             st = tostring(c(colors.springGreen):lighten(0.75)),
             nu = tostring(c(colors.sakuraPink):lighten(0.8):saturate(0.9)),
@@ -217,14 +196,12 @@ return {
             br = tostring(c(colors.springViolet2):lighten(0.7):saturate(0.9)),
             re = tostring(c(colors.boatYellow2):lighten(0.7):saturate(1)),
             dep = tostring(c(colors.katanaGray):lighten(0.5)),
-
             diag = {
                 error = tostring(c(colors.samuraiRed):lighten(1)),
                 warning = tostring(c(colors.roninYellow):lighten(0.9):saturate(1)),
                 info = tostring(c(colors.dragonBlue):lighten(0.9)),
                 hint = tostring(c(colors.waveAqua1):lighten(0.9)),
             },
-
             diff = {
                 add = tostring(c(colors.winterGreen):lighten(4):saturate(0.9)),
                 delete = tostring(c(colors.winterRed):lighten(3.9):saturate(1.3):hue(0.08)),

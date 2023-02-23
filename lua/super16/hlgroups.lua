@@ -1,8 +1,9 @@
 local M = {}
 local c = require("super16.color")
 
+---@param colors Super16Colors
 local function setup_terminal_colors(colors)
-    vim.g.terminal_color_0 = "#090618" -- black
+    vim.g.terminal_color_0 = colors.sumiInk0 -- black
     vim.g.terminal_color_1 = colors.autumnRed -- red
     vim.g.terminal_color_2 = colors.autumnGreen -- green
     vim.g.terminal_color_3 = colors.boatYellow2 -- yellow
@@ -99,14 +100,12 @@ function M.setup(colors, config)
         WarningMsg = { fg = colors.diag.warning },
         Whitespace = { fg = colors.bg_light2 },
         WildMenu = { link = "Pmenu" },
-
         Constant = { fg = colors.co },
         String = { fg = colors.st },
         Character = { link = "String" },
         Number = { fg = colors.nu },
         Boolean = { fg = colors.co, bold = true },
         Float = { link = "Number" },
-
         Identifier = { fg = colors.id },
         Function = vim.tbl_extend("force", { fg = colors.fn }, config.functionStyle),
         Method = { link = "Function" },
@@ -117,7 +116,6 @@ function M.setup(colors, config)
         Operator = { fg = colors.op },
         Keyword = vim.tbl_extend("force", { fg = colors.kw }, config.keywordStyle),
         Exception = { fg = colors.sp2 },
-
         PreProc = { fg = colors.pp },
         -- Include = {},
         -- Define = {},
@@ -140,15 +138,11 @@ function M.setup(colors, config)
         Underlined = { fg = colors.sp, underline = true },
         Bold = { bold = true },
         Italic = { italic = true },
-
         Ignore = { link = "NonText" },
-
         Error = { fg = colors.diag.error },
         Todo = { fg = colors.fg_reverse, bg = colors.diag.info, bold = true },
-
         qfLineNr = { link = "lineNr" },
         qfFileName = { link = "Directory" },
-
         -- htmlH1 = {},
         -- htmlH2 = {},
 
@@ -169,34 +163,27 @@ function M.setup(colors, config)
 
         debugPC = { bg = colors.diff.delete },
         debugBreakpoint = { fg = colors.sp },
-
         LspReferenceText = { bg = colors.diff.text },
         LspReferenceRead = { link = "LspReferenceText" },
         LspReferenceWrite = { link = "LspReferenceText" },
-
         DiagnosticError = { fg = colors.diag.error },
         DiagnosticWarn = { fg = colors.diag.warning },
         DiagnosticInfo = { fg = colors.diag.info },
         DiagnosticHint = { fg = colors.diag.hint },
-
         DiagnosticSignError = { link = "DiagnosticError" },
         DiagnosticSignWarn = { link = "DiagnosticWarn" },
         DiagnosticSignInfo = { link = "DiagnosticInfo" },
         DiagnosticSignHint = { link = "DiagnosticHint" },
-
         DiagnosticVirtualTextError = { link = "DiagnosticError" },
         DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" },
         DiagnosticVirtualTextInfo = { link = "DiagnosticInfo" },
         DiagnosticVirtualTextHint = { link = "DiagnosticHint" },
-
         DiagnosticUnderlineError = { undercurl = true, sp = colors.diag.error },
         DiagnosticUnderlineWarn = { undercurl = true, sp = colors.diag.warning },
         DiagnosticUnderlineInfo = { undercurl = true, sp = colors.diag.info },
         DiagnosticUnderlineHint = { undercurl = true, sp = colors.diag.hint },
-
         LspSignatureActiveParameter = { fg = colors.diag.warning },
         LspCodeLens = { fg = colors.fg_comment },
-
         -- TSAnnotation = {},
         ["@attribute"] = { link = "Constant" },
         -- TSBoolean = {},
@@ -259,7 +246,6 @@ function M.setup(colors, config)
         -- TSTypeBuiltin = {},
         ["@variable"] = { fg = colors.fg },
         ["@variable.builtin"] = vim.tbl_extend("force", { fg = colors.sp2 }, config.variablebuiltinStyle),
-
         -- TSTag = {},
         -- TSTagDelimiter = {},
         ["@tag"] = { link = "Tag" },
@@ -304,7 +290,6 @@ function M.setup(colors, config)
         NeogitDiffAdd = { fg = colors.git.added, bg = colors.diff.add },
         NeogitHunkHeader = { fg = colors.id },
         NeogitDiffContextHighlight = { bg = colors.diff.change },
-
         -- GitGutter
         -- GitGutterAdd = {},
         -- GitGutterChange = {},
@@ -315,13 +300,11 @@ function M.setup(colors, config)
         GitSignsChange = { link = "diffChanged" },
         GitSignsDelete = { link = "diffDeleted" },
         GitSignsDeleteLn = { bg = colors.diff.delete },
-
         -- Telescope                      = {},
         TelescopeBorder = { fg = colors.fg_border, bg = colors.bg },
         TelescopeResultsClass = { link = "TSType" },
         TelescopeResultsStruct = { link = "TSType" },
         TelescopeResultsVariable = { link = "TSVariable" },
-
         -- NvimTree                       = {},
         NvimTreeNormal = { link = "Normal" },
         NvimTreeNormalNC = { link = "NormalNC" },
@@ -338,13 +321,11 @@ function M.setup(colors, config)
         NvimTreeGitStaged = { fg = colors.git.added },
         NvimTreeOpenedFile = { fg = colors.sp, italic = true },
         NvimTreeWinSeparator = { link = "WinSeparator" },
-
         -- Dashboard
         DashboardShortCut = { fg = colors.sp },
         DashboardHeader = { fg = colors.git.removed },
         DashboardCenter = { fg = colors.id },
         DashboardFooter = { fg = colors.fn },
-
         -- Notify
         NotifyERRORBorder = { link = "DiagnosticError" },
         NotifyWARNBorder = { link = "DiagnosticWarn" },
@@ -364,11 +345,10 @@ function M.setup(colors, config)
         NotifyHINTTitle = { link = "DiagnosticHint" },
         NotifyDEBUGTitle = { link = "Debug" },
         NotifyTRACETitle = { link = "Comment" },
-
         -- Dap-UI
         -- DapUIVariable = { link = "Normal" },
-        DapUIScope = { link = 'Special' }, -- guifg=#00F1F5"
-        DapUIType = { link = 'Type' }, -- guifg=#D484FF"
+        DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
+        DapUIType = { link = "Type" }, -- guifg=#D484FF"
         -- DapUIValue = { link = "Normal" },
         DapUIModifiedValue = { fg = colors.sp, bold = true }, -- guifg=#00F1F5 gui=bold"
         DapUIDecoration = { fg = colors.fg_border }, -- guifg=#00F1F5"
@@ -381,11 +361,11 @@ function M.setup(colors, config)
         DapUIWatchesEmpty = { fg = colors.diag.error }, -- guifg=#F70067"
         DapUIWatchesValue = { fg = colors.id }, -- guifg=#A9FF68"
         DapUIWatchesError = { fg = colors.diag.error }, --guifg=#F70067"
-        DapUIBreakpointsPath = { link = 'Directory' }, --guifg=#00F1F5"
+        DapUIBreakpointsPath = { link = "Directory" }, --guifg=#00F1F5"
         DapUIBreakpointsInfo = { fg = colors.diag.info }, --guifg=#A9FF68"
         DapUIBreakpointsCurrentLine = { fg = colors.id, bold = true }, --guifg=#A9FF68 gui=bold"
         -- DapUIBreakpointsLine = {}, -- DapUILineNumber"
-        DapUIBreakpointsDisabledLine = { link = 'Comment' }, --guifg=#424242"
+        DapUIBreakpointsDisabledLine = { link = "Comment" }, --guifg=#424242"
         -- DapUICurrentFrameName = {}, -- DapUIBreakpointsCurrentLine"
         DapUIStepOver = { fg = colors.sp }, --guifg=#00f1f5"
         DapUIStepInto = { fg = colors.sp }, --guifg=#00f1f5"
@@ -395,15 +375,12 @@ function M.setup(colors, config)
         DapUIPlayPause = { fg = colors.st }, --guifg=#A9FF68"
         DapUIRestart = { fg = colors.st }, --guifg=#A9FF68"
         DapUIUnavailable = { fg = colors.fg_comment }, --guifg=#424242"
-
         -- Floaterm
         FloatermBorder = { fg = colors.fg_border, bg = colors.bg },
-
         -- NeoVim                         = {},
         healthError = { fg = colors.diag.error },
         healthSuccess = { fg = colors.st },
         healthWarning = { fg = colors.diag.warning },
-
         -- Cmp
         CmpDocumentation = { link = "NormalFloat" },
         CmpDocumentationBorder = { link = "FloatBorder" },
@@ -412,54 +389,39 @@ function M.setup(colors, config)
         CmpCompletionBorder = { fg = colors.bg_search, bg = colors.bg_menu },
         CmpCompletionThumb = { link = "PmenuThumb" },
         CmpCompletionSbar = { link = "PmenuSbar" },
-
         CmpItemAbbr = { fg = colors.fg_menu },
         CmpItemAbbrDeprecated = { fg = colors.fg_comment, strikethrough = true },
-
         CmpItemAbbrMatch = { fg = colors.fn },
         CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
-
         CmpItemKindDefault = { fg = colors.dep },
         CmpItemMenu = { fg = colors.fg_comment },
-
         CmpItemKindVariable = { fg = colors.fg_dark },
-
         CmpItemKindFunction = { link = "Function" },
         CmpItemKindMethod = { link = "Function" },
-
         CmpItemKindConstructor = { link = "TSConstructor" },
-
         CmpItemKindClass = { link = "Type" },
         CmpItemKindInterface = { link = "Type" },
         CmpItemKindStruct = { link = "Type" },
-
         CmpItemKindProperty = { link = "TSProperty" },
         CmpItemKindField = { link = "TSField" },
         CmpItemKindEnum = { link = "Identifier" },
-
         CmpItemKindSnippet = { fg = colors.sp },
-
         CmpItemKindText = { link = "TSText" },
-
         CmpItemKindModule = { link = "TSInclude" },
-
         CmpItemKindFile = { link = "Directory" },
         CmpItemKindFolder = { link = "Directory" },
-
         CmpItemKindKeyword = { link = "TSKeyword" },
         CmpItemKindTypeParameter = { link = "Identifier" },
         CmpItemKindConstant = { link = "Constant" },
         CmpItemKindOperator = { link = "Operator" },
         CmpItemKindReference = { link = "TSParameterReference" },
         CmpItemKindEnumMember = { link = "TSField" },
-
         CmpItemKindValue = { link = "String" },
         -- CmpItemKindUnit = {},
         -- CmpItemKindEvent = {},
         -- CmpItemKindColor = {},
 
         CmpItemKindCopilot = { link = "String" },
-
         -- IndentBlankline
         IndentBlanklineChar = { fg = colors.bg_light2 },
         IndentBlanklineSpaceChar = { fg = colors.bg_light2 },

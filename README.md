@@ -1,7 +1,7 @@
 # Super16
 
-A framework for extrapolating rich highlight groups from user-provided palettes. Powered by
-[HSLuv](https://www.hsluv.org) and the highlight groups defined in
+My own take on [Base16](https://github.com/chriskempson/base16). A framework for extrapolating rich highlight groups
+from user-provided palettes. Powered by [HSLuv](https://www.hsluv.org) and the highlight groups defined in
 [Kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim).
 
 ## Installation
@@ -134,4 +134,6 @@ vim.cmd("colorscheme kanagawa")
 All the hard work for HSLuv support and the excellent highlight groups comes from the wonderful
 [Kanagawa](https://github.com/rebelot/kanagawa.nvim) colorscheme.  My original intention was to make a warmer and more
 desaturated version of Kanagawa and merge it in as a theme, but the work to do so in a logical way ended up being this
-repo, which is more general.
+repo, which is more general.  I ended up basically ripping off the idea of
+[Base16](https://github.com/chriskempson/base16), but with highlight groups and features from Kanagawa (which I love),
+and hopefully my own spin on logical palette extrapolation.
