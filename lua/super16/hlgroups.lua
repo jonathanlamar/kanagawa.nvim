@@ -1,26 +1,25 @@
 local M = {}
-local c = require("super16.color")
 
 ---@param colors Super16ColorSet|ThemeColors
 local function setup_terminal_colors(colors)
-    vim.g.terminal_color_0 = colors.black0 -- black
-    vim.g.terminal_color_1 = colors.red1 -- red
-    vim.g.terminal_color_2 = colors.green1 -- green
-    vim.g.terminal_color_3 = colors.yellow2 -- yellow
-    vim.g.terminal_color_4 = colors.blue4 -- blue
-    vim.g.terminal_color_5 = colors.violet1 -- magenta
-    vim.g.terminal_color_6 = colors.cyan0 -- cyan
-    vim.g.terminal_color_7 = colors.white0 -- white
-    vim.g.terminal_color_8 = colors.gray1 -- bright black
-    vim.g.terminal_color_9 = colors.red2 -- bright red
-    vim.g.terminal_color_10 = colors.green2 -- bright green
-    vim.g.terminal_color_11 = colors.yellow3 -- bright yellow
-    vim.g.terminal_color_12 = colors.blue6 -- bright blue
-    vim.g.terminal_color_13 = colors.violet0 -- bright magenta
-    vim.g.terminal_color_14 = colors.cyan1 -- bright cyan
-    vim.g.terminal_color_15 = colors.white1 -- bright white
+    vim.g.terminal_color_0 = colors.term00Black -- black
+    vim.g.terminal_color_1 = colors.term01Red -- red
+    vim.g.terminal_color_2 = colors.term02Green -- green
+    vim.g.terminal_color_3 = colors.term03Yellow -- yellow
+    vim.g.terminal_color_4 = colors.term04Blue -- blue
+    vim.g.terminal_color_5 = colors.term05Violet -- violet
+    vim.g.terminal_color_6 = colors.term06Cyan -- cyan
+    vim.g.terminal_color_7 = colors.term07White -- white
+    vim.g.terminal_color_8 = colors.term08BrightBlack -- bright black
+    vim.g.terminal_color_9 = colors.term09BrightRed -- bright red
+    vim.g.terminal_color_10 = colors.term10BrightGreen -- bright green
+    vim.g.terminal_color_11 = colors.term11BrightYellow -- bright yellow
+    vim.g.terminal_color_12 = colors.term12BrightBlue -- bright blue
+    vim.g.terminal_color_13 = colors.term13BrightViolet -- bright violet
+    vim.g.terminal_color_14 = colors.term14BrightCyan -- bright cyan
+    vim.g.terminal_color_15 = colors.term15BrightWhite -- bright white
     vim.g.terminal_color_16 = colors.orange2 -- extended color 1
-    vim.g.terminal_color_17 = colors.red4 -- extended color 2
+    vim.g.terminal_color_17 = colors.pinkRed -- extended color 2
 end
 
 --- generate highlights table
@@ -36,7 +35,7 @@ function M.setup(colors, config)
         Cursor = { fg = colors.bg, bg = colors.fg },
         lCursor = { link = "Cursor" },
         CursorIM = { link = "Cursor" },
-        CursorLine = { bg = colors.bg_light1 },
+        CursorLine = { bg = colors.bg_light0 },
         CursorColumn = { link = "CursorLine" },
         Directory = { fg = colors.fn },
         DiffAdd = { bg = colors.diff.add },
@@ -48,7 +47,7 @@ function M.setup(colors, config)
         -- TermCursorNC = {},
         ErrorMsg = { fg = colors.diag.error },
         WinSeparator = {
-            fg = tostring(c(colors.bg_dark):lighten(0.6)),
+            fg = colors.term07White,
             bg = config.dimInactive and colors.bg_dim or "NONE",
         },
         VertSplit = { link = "WinSeparator" },
@@ -353,34 +352,34 @@ function M.setup(colors, config)
         NotifyTRACETitle = { link = "Comment" },
         -- Dap-UI
         -- DapUIVariable = { link = "Normal" },
-        DapUIScope = { link = "Special" }, -- guifg=#00F1F5"
-        DapUIType = { link = "Type" }, -- guifg=#D484FF"
+        DapUIScope = { link = "Special" },
+        DapUIType = { link = "Type" },
         -- DapUIValue = { link = "Normal" },
-        DapUIModifiedValue = { fg = colors.sp, bold = true }, -- guifg=#00F1F5 gui=bold"
-        DapUIDecoration = { fg = colors.fg_border }, -- guifg=#00F1F5"
-        DapUIThread = { fg = colors.id }, --guifg=#A9FF68"
-        DapUIStoppedThread = { fg = colors.sp }, --guifg=#00f1f5"
+        DapUIModifiedValue = { fg = colors.sp, bold = true },
+        DapUIDecoration = { fg = colors.fg_border },
+        DapUIThread = { fg = colors.id },
+        DapUIStoppedThread = { fg = colors.sp },
         -- DapUIFrameName = { link = "Normal"},
-        DapUISource = { fg = colors.sp2 }, -- guifg=#D484FF"
-        DapUILineNumber = { fg = colors.sp }, -- guifg=#00f1f5"
-        DapUIFloatBorder = { fg = colors.fg_border }, -- guifg=#00F1F5"
-        DapUIWatchesEmpty = { fg = colors.diag.error }, -- guifg=#F70067"
-        DapUIWatchesValue = { fg = colors.id }, -- guifg=#A9FF68"
-        DapUIWatchesError = { fg = colors.diag.error }, --guifg=#F70067"
-        DapUIBreakpointsPath = { link = "Directory" }, --guifg=#00F1F5"
-        DapUIBreakpointsInfo = { fg = colors.diag.info }, --guifg=#A9FF68"
-        DapUIBreakpointsCurrentLine = { fg = colors.id, bold = true }, --guifg=#A9FF68 gui=bold"
+        DapUISource = { fg = colors.sp2 },
+        DapUILineNumber = { fg = colors.sp },
+        DapUIFloatBorder = { fg = colors.fg_border },
+        DapUIWatchesEmpty = { fg = colors.diag.error },
+        DapUIWatchesValue = { fg = colors.id },
+        DapUIWatchesError = { fg = colors.diag.error },
+        DapUIBreakpointsPath = { link = "Directory" },
+        DapUIBreakpointsInfo = { fg = colors.diag.info },
+        DapUIBreakpointsCurrentLine = { fg = colors.id, bold = true },
         -- DapUIBreakpointsLine = {}, -- DapUILineNumber"
-        DapUIBreakpointsDisabledLine = { link = "Comment" }, --guifg=#424242"
+        DapUIBreakpointsDisabledLine = { link = "Comment" },
         -- DapUICurrentFrameName = {}, -- DapUIBreakpointsCurrentLine"
-        DapUIStepOver = { fg = colors.sp }, --guifg=#00f1f5"
-        DapUIStepInto = { fg = colors.sp }, --guifg=#00f1f5"
-        DapUIStepBack = { fg = colors.sp }, --guifg=#00f1f5"
-        DapUIStepOut = { fg = colors.sp }, --guifg=#00f1f5"
-        DapUIStop = { fg = colors.diag.error }, --guifg=#F70067"
-        DapUIPlayPause = { fg = colors.st }, --guifg=#A9FF68"
-        DapUIRestart = { fg = colors.st }, --guifg=#A9FF68"
-        DapUIUnavailable = { fg = colors.fg_comment }, --guifg=#424242"
+        DapUIStepOver = { fg = colors.sp },
+        DapUIStepInto = { fg = colors.sp },
+        DapUIStepBack = { fg = colors.sp },
+        DapUIStepOut = { fg = colors.sp },
+        DapUIStop = { fg = colors.diag.error },
+        DapUIPlayPause = { fg = colors.st },
+        DapUIRestart = { fg = colors.st },
+        DapUIUnavailable = { fg = colors.fg_comment },
         -- Floaterm
         FloatermBorder = { fg = colors.fg_border, bg = colors.bg },
         -- NeoVim                         = {},

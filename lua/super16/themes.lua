@@ -1,135 +1,111 @@
----@class ThemeColors
----@field black0 string
----@field black1b string
----@field black1c string
----@field black1 string
----@field black2 string
----@field black3 string
----@field black4 string
----@field blue1 string
----@field blue2 string
----@field green0 string
----@field yellow0 string
----@field red0 string
----@field blue0 string
----@field green1 string
----@field red1 string
----@field orange0 string
----@field red2 string
----@field orange1 string
----@field cyan0 string
----@field blue3 string
----@field white0 string
----@field white1 string
----@field gray1 string
----@field violet0 string
----@field violet1 string
----@field blue4 string
----@field blue5 string
----@field blue6 string
----@field blue7 string
----@field cyan1 string
----@field green2 string
----@field yellow1 string
----@field yellow2 string
----@field yellow3 string
----@field magenta1 string
----@field magenta0 string
----@field red4 string
----@field orange2 string
----@field gray0 string
+---@class TermColors
+---@field term00Black string
+---@field term01Red string
+---@field term02Green string
+---@field term03Yellow string
+---@field term04Blue string
+---@field term05Violet string
+---@field term06Cyan string
+---@field term07White string
+---@field term08BrightBlack string
+---@field term09BrightRed string
+---@field term10BrightGreen string
+---@field term11BrightYellow string
+---@field term12BrightBlue string
+---@field term13BrightViolet string
+---@field term14BrightCyan string
+---@field term15BrightWhite string
 
 return {
     gruvbox = {
-        -- Bg Shades
-        black0 = "#282828",
-        black1b = "#181820",
-        black1c = "#1a1a22",
-        black1 = "#1D2021",
-        black2 = "#32302F",
-        black3 = "#3C3836",
-        black4 = "#504945",
-
-        -- Popup and Floats
-        blue1 = "#665C54",
-        blue2 = "#374141",
-
-        -- Diff and Git
-        green0 = "#34381b",
-        yellow0 = "#4f422e",
-        red0 = "#402120",
-        blue0 = "#0e363e",
-        green1 = "#98971A",
-        red1 = "#9d0006",
-        orange0 = "#D79921",
-
-        -- Diag
-        red2 = "#CC241D",
-        orange1 = "#FABD2F",
-        cyan0 = "#689D6A",
-        blue3 = "#45707a",
-
-        -- Fg and Comments
-        white0 = "#EBDBB2",
-        white1 = "#FBF1C7",
-        gray1 = "#928374",
-        violet0 = "#B16286",
-        violet1 = "#D3869B",
-        blue4 = "#458588",
-        blue5 = "#7daea3",
-        blue6 = "#83A598",
-        blue7 = "#80aa9e", -- unused yet
-        cyan1 = "#8EC07C", -- improve lightness: desaturated greenish Aqua
-
-        green2 = "#B8BB26",
-        yellow1 = "#A89984",
-        yellow2 = "#BDAE93",
-        yellow3 = "#D5C4A1",
-        magenta1 = "#d3869b",
-        magenta0 = "#D65D0E",
-        red4 = "#FB4934",
-        orange2 = "#FE8019",
-        gray0 = "#7C6F64",
+        term00Black = "#1d2021",
+        term01Red = "#cc241d",
+        term02Green = "#98971a",
+        term03Yellow = "#d79921",
+        term04Blue = "#458588",
+        term05Violet = "#b16286",
+        term06Cyan = "#689d6a",
+        term07White = "#a89984",
+        term08BrightBlack = "#928374",
+        term09BrightRed = "#fb4934",
+        term10BrightGreen = "#b8bb26",
+        term11BrightYellow = "#fabd2f",
+        term12BrightBlue = "#83a598",
+        term13BrightViolet = "#d3869b",
+        term14BrightCyan = "#8ec07c",
+        term15BrightWhite = "#ebdbb2",
     },
     kanagawa = {
-        white1 = "#DCD7BA",
-        white0 = "#C8C093",
-        black0 = "#16161D",
-        black1 = "#1F1F28",
-        black1b = "#181820",
-        black1c = "#1a1a22",
-        black2 = "#2A2A37",
-        black3 = "#363646",
-        black4 = "#54546D",
-        blue1 = "#223249",
-        blue2 = "#2D4F67",
-        green0 = "#2B3328",
-        yellow0 = "#49443C",
-        red0 = "#43242B",
-        blue0 = "#252535",
-        green1 = "#76946A",
-        red1 = "#C34043",
-        orange0 = "#DCA561",
-        red2 = "#E82424",
-        orange1 = "#FF9E3B",
-        cyan0 = "#6A9589",
-        blue3 = "#658594",
-        gray1 = "#727169",
-        violet0 = "#938AA9",
-        violet1 = "#957FB8",
-        blue4 = "#7E9CD8",
-        blue5 = "#9CABCA",
-        blue6 = "#7FB4CA",
-        blue7 = "#A3D4D5",
-        cyan1 = "#7AA89F",
-        green2 = "#98BB6C",
-        yellow1 = "#938056",
-        yellow2 = "#C0A36E",
-        yellow3 = "#E6C384",
-        magenta1 = "#D27E99",
-        magenta0 = "#E46876",
-        red4 = "#FF5D62",
-        orange2 = "#FFA066",
-        gray0 = "#717C7C",
+        term00Black = "#16161D",
+        term01Red = "#C34043",
+        term02Green = "#76946A",
+        term03Yellow = "#C0A36E",
+        term04Blue = "#7E9CD8",
+        term05Violet = "#938AA9",
+        term06Cyan = "#6A9589",
+        term07White = "#C8C093",
+        term08BrightBlack = "#727169",
+        term09BrightRed = "#E82424",
+        term10BrightGreen = "#98BB6C",
+        term11BrightYellow = "#E6C384",
+        term12BrightBlue = "#7FB4CA",
+        term13BrightViolet = "#957FB8",
+        term14BrightCyan = "#7AA89F",
+        term15BrightWhite = "#DCD7BA",
+    },
+    melange = {
+        term00Black = "#1c1a18",
+        term01Red = "#b64b4e",
+        term02Green = "#78997A",
+        term03Yellow = "#E49B5D",
+        term04Blue = "#7F91B2",
+        term05Magenta = "#B380B0",
+        term06Cyan = "#7B9695",
+        term07White = "#C1A78E",
+        term08BrightBlack = "#867462",
+        term09BrightRed = "#D47766",
+        term10BrightGreen = "#85B695",
+        term11BrightYellow = "#EBC06D",
+        term12BrightBlue = "#A3A9CE",
+        term13BrightMagenta = "#CF9BC2",
+        term14BrightCyan = "#89B3B6",
+        term15BrightWhite = "#ECE1D7",
+    },
+    oneDark = {
+        term00Black = "#101012",
+        term01Red = "#de5d68",
+        term02Green = "#8fb573",
+        term03Yellow = "#dbb671",
+        term04Blue = "#57a5e5",
+        term05Violet = "#bb70d2",
+        term06Cyan = "#51a8b3",
+        term07White = "#a7aab0",
+        term08BrightBlack = "#a7aab0",
+        term09BrightRed = "#de5d68",
+        term10BrightGreen = "#8fb573",
+        term11BrightYellow = "#dbb671",
+        term12BrightBlue = "#57a5e5",
+        term13BrightViolet = "#bb70d2",
+        term14BrightCyan = "#51a8b3",
+        term15BrightWhite = "#a7aab0",
+    },
+    -- This one is terrible.  Just for testing
+    tangoDark = {
+        term00Black = "#111111",
+        term01Red = "#d71e00",
+        term02Green = "#5da602",
+        term03Yellow = "#cfad00",
+        term04Blue = "#417ab3",
+        term05Violet = "#88658d",
+        term06Cyan = "#00a7aa",
+        term07White = "#dbded8",
+        term08BrightBlack = "#676965",
+        term09BrightRed = "#f44135",
+        term10BrightGreen = "#98e342",
+        term11BrightYellow = "#fcea60",
+        term12BrightBlue = "#83afd8",
+        term13BrightViolet = "#bc93b6",
+        term14BrightCyan = "#37e5e7",
+        term15BrightWhite = "#f1f1ef",
     },
 }

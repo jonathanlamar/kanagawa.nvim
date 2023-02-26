@@ -26,7 +26,7 @@ M.config = {
     dimInactive = false,
     globalStatus = false,
     terminalColors = true,
-    ---@type ThemeColors
+    ---@type ThemeColors|TermColors
     colors = {},
     overrides = {},
     theme = "kanagawa",

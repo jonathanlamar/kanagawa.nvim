@@ -51,7 +51,7 @@ function Color:saturate(r)
 end
 
 function Color:hue(r)
-    local H = self.H * r
+    local H = (self.H + r) % 360
     if H > 360 then
         H = 360
     end
