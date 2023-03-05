@@ -112,9 +112,9 @@ local buildThemeFromTermColors = function(termColors)
         black2 = tostring(c(termColors.term00Black):lighten(2.3)),
         black3 = tostring(c(termColors.term00Black):lighten(3.1)),
         black4 = tostring(c(termColors.term00Black):lighten(4.8)),
-        blueBlack0 = tostring(c(termColors.term04Blue):lighten(0.25):saturate(0.4):hue(10)),
-        blueBlack1 = tostring(c(termColors.term04Blue):lighten(0.3):saturate(0.9)),
-        blueBlack2 = tostring(c(termColors.term04Blue):lighten(0.5):hue(-15)),
+        blueBlack0 = tostring(c(termColors.term04Blue):lighten(0.3):saturate(0.4):hue(10)),
+        blueBlack1 = tostring(c(termColors.term04Blue):lighten(0.4):saturate(0.9)),
+        blueBlack2 = tostring(c(termColors.term04Blue):lighten(0.6):hue(-15)),
         brightMagenta = tostring(c(termColors.term09BrightRed):hue(-20):saturate(0.55):lighten(1.2)),
         darkBlue = tostring(c(termColors.term04Blue):lighten(0.85):saturate(0.7):hue(-25)),
         darkYellow = tostring(c(termColors.term03Yellow):saturate(0.95):lighten(0.8)),
@@ -200,7 +200,9 @@ function M.setup(config)
     local termColors = limitToTermColors(require("super16.themes")[config.theme])
     local theme = buildThemeFromTermColors(termColors)
     theme = vim.tbl_extend("force", theme, config.colors)
-    return vim.tbl_extend("force", theme, colorPalette(theme))
+    local palette = colorPalette(theme)
+    palette = vim.tbl_extend("force", palette, config.colors)
+    return palette
 end
 
 return M

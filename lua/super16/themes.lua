@@ -69,7 +69,7 @@ return {
         term12BrightBlue = "#A3A9CE",
         term13BrightViolet = "#CF9BC2",
         term14BrightCyan = "#89B3B6",
-        term15BrightWhite = "#ECE1D7",
+        term15BrightWhite = "#c9beb4",
     },
     oneDark = {
         term00Black = "#101012",
